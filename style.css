@@ -1,0 +1,65 @@
+#container {
+    display: grid;
+    grid-template-rows: 1fr 6fr;
+    min-height: 100vh;
+}
+
+#container>header {
+    display: flex;
+    align-items: center;
+    background: lightseagreen;
+    color: white;
+    font-family: sans-serif;
+    justify-content: space-between;
+}
+
+label, #toggle
+{
+    display: none;
+}
+ 
+@media all and (max-width: 780px)
+{
+    nav
+    {
+        height: 60px;
+    }
+ 
+    nav .menu
+    {
+        display: none;
+        flex-direction: column;
+        background:lightseagreen;
+        height: 300px;
+        width: 100vh;
+    }
+ 
+    nav .menu a {
+        width: 50%;
+        height: 100px;
+        font-size: 20px;
+        margin-top: 5%;
+    }
+ 
+    label 
+    {
+        width: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        font-size: 40px;
+        color: white;
+        cursor: pointer;
+    }
+
+    #toggle:checked + .menu {
+        display: flex;
+        align-items: center;
+    }
+
+}
+
+nav a:hover {
+    background: blanchedalmond;
+}
